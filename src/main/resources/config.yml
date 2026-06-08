@@ -1,0 +1,56 @@
+# LightDeathMessages settings. Edit messages in messages.yml or themes/<name>.yml.
+enabled: true
+debug: false
+
+# Set true to prevent vanilla death messages from duplicating custom ones.
+hide-vanilla-death-message: true
+
+broadcast:
+  # GLOBAL, WORLD, RADIUS, or DISABLED
+  mode: GLOBAL
+  radius: 100
+  max-radius: 500
+
+worlds:
+  # Empty enabled list means all worlds are enabled unless listed in disabled.
+  enabled: []
+  disabled: []
+  per-world: {}
+
+formatting:
+  # LEGACY, MINIMESSAGE, or PLAIN
+  mode: LEGACY
+  legacy-colors: true
+  minimessage: false
+
+placeholders:
+  placeholderapi: true
+
+display:
+  weapon-name: true
+  killer-health: true
+  distance: true
+  death-location: false
+  world-name: true
+
+messages:
+  random-selection: RANDOM
+  disabled-categories: []
+
+permissions:
+  silent: deathmessages.silent
+  bypass: deathmessages.bypass
+  respect-silent: true
+  respect-bypass: true
+
+themes:
+  # Use "messages" for messages.yml, or use any file name from themes without .yml.
+  # Example: themes/random.yml becomes selected-theme: random
+  selected-theme: messages
+
+logging:
+  warn-missing-keys: true
+  warn-once: true
+
+fallback:
+  unknown-message: "&8[&c\u2620&8] &c{victim} &7died."

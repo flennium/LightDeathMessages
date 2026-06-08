@@ -1,0 +1,41 @@
+name: LightDeathMessages
+version: 1.0.0
+main: org.flennn.lightdeathmessages.DeathMessagesPlugin
+api-version: '1.21'
+author: flennn
+description: Lightweight configurable death messages for Paper and Spigot.
+softdepend:
+  - PlaceholderAPI
+folia-supported: true
+commands:
+  deathmessages:
+    description: Main LightDeathMessages command.
+    usage: /deathmessages help
+    aliases:
+      - dm
+      - deathmsg
+permissions:
+  deathmessages.admin:
+    description: Allows access to administrative commands.
+    default: op
+  deathmessages.reload:
+    description: Allows reloading LightDeathMessages.
+    default: op
+  deathmessages.test:
+    description: Allows sending test death messages.
+    default: op
+  deathmessages.theme:
+    description: Allows listing themes.
+    default: op
+  deathmessages.theme.apply:
+    description: Allows applying themes.
+    default: op
+  deathmessages.theme.preview:
+    description: Allows previewing themes.
+    default: op
+  deathmessages.bypass:
+    description: Bypasses custom death message handling when configured.
+    default: false
+  deathmessages.silent:
+    description: Prevents custom death broadcasts when configured.
+    default: false

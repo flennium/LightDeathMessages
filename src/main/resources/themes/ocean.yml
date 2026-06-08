@@ -1,0 +1,163 @@
+﻿prefix: "&8[&3Tide&8]"
+
+commands:
+  help:
+    - "{prefix} &8&m------------&r &c&lCommand Center &8&m------------"
+    - "&c/deathmessages reload &8- &7Reload config, messages, and themes safely."
+    - "&c/deathmessages version &8- &7Show the loaded plugin version."
+    - "&c/deathmessages test <type|all> [self|global|world|radius|disabled] &8- &7Preview one category or every death message."
+    - "&c/deathmessages theme list &8- &7Show installed themes."
+    - "&c/deathmessages theme preview <theme> &8- &7Preview a theme before using it."
+    - "&c/deathmessages theme apply <theme> &8- &7Copy a theme into messages.yml with a backup."
+    - "&8Tip: &7Use &fconfig.yml &7theme selection for instant theme switching."
+    - "&8&m----------------------------------------"
+  reload-success: "{prefix} &aReload complete. &7Config, messages, and theme files are ready."
+  reload-failed: "{prefix} &cReload failed. &7Check the console for the exact issue."
+  no-permission: "{prefix} &cYou do not have permission to use this command."
+  version: "{prefix} &7Running &fLightDeathMessages {version}&7."
+  test-sent: "{prefix} &aPreview sent."
+  unknown-command: "{prefix} &cUnknown command. &7Use &f/deathmessages help&7."
+  player-only: "{prefix} &cOnly players can use this command."
+  theme-list: "{prefix} &7Installed themes: &f{themes}"
+  theme-applied: "{prefix} &aTheme &f{theme} &awas copied into messages.yml and loaded."
+  theme-apply-failed: "{prefix} &cTheme &f{theme} &ccould not be applied. Your backup was kept safe."
+  theme-not-found: "{prefix} &cTheme &f{theme} &cwas not found in the themes folder."
+  theme-preview-header: "{prefix} &7Previewing theme &f{theme}&7:"
+fallback:
+  unknown:
+    - "&8[&b\u2620&8] &b{victim} &7was claimed by the tide."
+
+player:
+  generic:
+    - "&8[&b\u2620&8] &b{victim} &7was sunk by &b{killer}&7."
+  melee:
+    - "&8[&b\u2620&8] &b{killer} &7dragged &b{victim} &7below the waves."
+    - "&8[&b\u2620&8] &b{killer} &7defeated &c{victim}&7 with &f{weapon}&7."
+  magic:
+    - "&8[&b\u2620&8] &c{victim} &7was magically ended by &b{killer}&7."
+  explosion:
+    - "&8[&b\u2620&8] &c{victim} &7was blown up by &b{killer}&7."
+  projectile:
+    generic:
+      - "&8[&b\u2620&8] &c{victim} &7was shot by &b{killer}&7."
+    arrow:
+      - "&8[&b\u2620&8] &c{victim} &7was pierced by &b{killer}&7."
+    trident:
+      - "&8[&b\u2620&8] &c{victim} &7was skewered by &b{killer}&7."
+    fireball:
+      - "&8[&b\u2620&8] &c{victim} &7was fireballed by &b{killer}&7."
+    snowball:
+      - "&8[&b\u2620&8] &c{victim} &7lost a snowball fight against &b{killer}&7."
+
+mob:
+  zombie:
+    - "&8[&b\u2620&8] &c{victim} &7was eaten by a zombie."
+  skeleton:
+    - "&8[&b\u2620&8] &c{victim} &7was shot by a skeleton."
+  creeper:
+    - "&8[&b\u2620&8] &c{victim} &7was hugged by a creeper."
+  wolf:
+    - "&8[&b\u2620&8] &c{victim} &7was mauled by a wolf."
+  warden:
+    - "&8[&b\u2620&8] &c{victim} &7was erased by the Warden's sonic boom."
+  generic:
+    - "&8[&b\u2620&8] &c{victim} &7was killed by &b{mob}&7."
+
+environment:
+  generic:
+    - "&8[&b\u2620&8] &c{victim} &7died to &f{death_cause}&7."
+  kill:
+    - "&8[&b\u2620&8] &c{victim} &7was removed from the world."
+  world_border:
+    - "&8[&b\u2620&8] &c{victim} &7crossed the world border."
+  contact:
+    - "&8[&b\u2620&8] &c{victim} &7touched something deadly."
+  cactus:
+    - "&8[&b\u2620&8] &c{victim} &7was pricked to death."
+  cramming:
+    - "&8[&b\u2620&8] &c{victim} &7was crushed by too many entities."
+  custom:
+    - "&8[&b\u2620&8] &c{victim} &7died to a custom damage source."
+  dragon_breath:
+    - "&8[&b\u2620&8] &c{victim} &7was dissolved by dragon breath."
+  drowning:
+    - "&8[&b\u2620&8] &b{victim} &7ran out of bubbles."
+  dryout:
+    - "&8[&b\u2620&8] &c{victim} &7dried out."
+  entity_attack:
+    - "&8[&b\u2620&8] &c{victim} &7was struck down in combat."
+  fall:
+    - "&8[&b\u2620&8] &c{victim} &7fell from a high place."
+  fire:
+    - "&8[&b\u2620&8] &c{victim} &7went up in flames."
+  lava:
+    - "&8[&b\u2620&8] &c{victim} &7tried to swim in lava."
+  suffocation:
+    - "&8[&b\u2620&8] &c{victim} &7suffocated in a wall."
+  starvation:
+    - "&8[&b\u2620&8] &c{victim} &7starved to death."
+  poison:
+    - "&8[&b\u2620&8] &c{victim} &7was poisoned."
+  projectile:
+    - "&8[&b\u2620&8] &c{victim} &7was killed by a projectile."
+  magic:
+    - "&8[&b\u2620&8] &c{victim} &7was killed by magic."
+  freezing:
+    - "&8[&b\u2620&8] &c{victim} &7froze to death."
+  lightning:
+    - "&8[&b\u2620&8] &c{victim} &7was struck by lightning."
+  anvil:
+    - "&8[&b\u2620&8] &c{victim} &7was crushed by an anvil."
+  falling_block:
+    - "&8[&b\u2620&8] &c{victim} &7was crushed by a falling block."
+  fly_into_wall:
+    - "&8[&b\u2620&8] &c{victim} &7flew into a wall."
+  campfire:
+    - "&8[&b\u2620&8] &c{victim} &7stood on a campfire too long."
+  hot_floor:
+    - "&8[&b\u2620&8] &c{victim} &7discovered the floor was magma."
+  melting:
+    - "&8[&b\u2620&8] &c{victim} &7melted."
+  sonic_boom:
+    - "&8[&b\u2620&8] &c{victim} &7was shattered by a sonic boom."
+  suicide:
+    - "&8[&b\u2620&8] &c{victim} &7died by suicide damage."
+  thorns:
+    - "&8[&b\u2620&8] &c{victim} &7was killed by thorns."
+  void:
+    - "&8[&b\u2620&8] &c{victim} &7fell into the void."
+  wither:
+    - "&8[&b\u2620&8] &c{victim} &7withered away."
+  block_explosion:
+    - "&8[&b\u2620&8] &c{victim} &7was caught in a block explosion."
+  entity_explosion:
+    - "&8[&b\u2620&8] &c{victim} &7was caught in an entity explosion."
+  bad_respawn_point:
+    - "&8[&b\u2620&8] &c{victim} &7was caught in a respawn explosion."
+  outside_border:
+    - "&8[&b\u2620&8] &c{victim} &7crossed beyond the world border."
+  generic_kill:
+    - "&8[&b\u2620&8] &c{victim} &7was removed from the world."
+  invulnerability_reduction:
+    - "&8[&b\u2620&8] &c{victim} &7was worn down by invulnerability reduction."
+
+explosion:
+  generic:
+    - "&8[&b\u2620&8] &b{victim} &7was scattered like sea foam."
+  block:
+    - "&8[&b\u2620&8] &c{victim} &7was caught in a block explosion."
+  entity:
+    - "&8[&b\u2620&8] &c{victim} &7was caught in an entity explosion."
+  tnt:
+    - "&8[&b\u2620&8] &c{victim} &7was blown up by TNT."
+  crystal:
+    - "&8[&b\u2620&8] &c{victim} &7was shattered by an end crystal."
+  bed:
+    - "&8[&b\u2620&8] &c{victim} &7learned beds are dangerous here."
+  respawn_anchor:
+    - "&8[&b\u2620&8] &c{victim} &7overcharged a respawn anchor."
+
+
+
+
+
