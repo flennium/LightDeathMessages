@@ -19,7 +19,6 @@ Preview the plugin in-game with real chat output and theme examples.
 | Theme Showcase | More Theme Showcase |
 | --- | --- |
 | ![Theme showcase](docs/screenshots/theme-showcase-01.png) | ![Theme showcase](docs/screenshots/theme-showcase-02.png) |
-| ![Theme showcase](docs/screenshots/theme-showcase-03.png) |  |
 
 ## Features
 
